@@ -53,4 +53,7 @@ function [inputs_train, targets_train, inputs_test, targets_test] = dividebase(i
            end
        end
     end
+    
+    targets_train = vet2mat(targets_train);
+    targets_test = vet2mat(targets_test);
 end

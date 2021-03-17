@@ -1,5 +1,5 @@
 function [shuffled_base] = shufflebase(base)
-    [rows, cols] = size(base);
+    [rows, ~] = size(base);
     p = randperm(rows);
     shuffled_base = base;
     for i = 1:rows
