@@ -5,12 +5,12 @@ rng(0);
 
 [base, inputs, targets] = loadbase('bank/bank-full.csv');
 
-[inputs_train, targets_train, inputs_test, targets_test] = dividebase(inputs, targets, 70);
+[inputs_train, targets_train, inputs_test, targets_test] = dividebase(inputs, targets, 40);
 
 [inputs_train, mean_z, std_z] = zscore(inputs_train);
 [inputs_test] = zscore_with_mean_std(inputs_test, mean_z, std_z);
 
-net = mlp(inputs_train, targets_train);
+net = rbf(inputs_train, targets_train);
 
 [acc, prec, recall, f1_score, confusion] = test_nn(net, inputs_test, targets_test);
 
