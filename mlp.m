@@ -11,9 +11,9 @@ function [net] = mlp(inputs_train, targets_train)
     net.divideParam.testRatio = 0;
     
     % train params
-    net.trainParam.mu = 0.01;
+    net.trainParam.mu = 0.001;
     net.trainParam.goal = 0;
-    net.trainParam.epochs = 1000;
+    net.trainParam.epochs = 2000;
     net.trainParam.max_fail = 10;
     net.trainParam.min_grad = 0.000001;
     

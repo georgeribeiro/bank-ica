@@ -18,5 +18,4 @@ function [acc, prec, recall, f1_score, confusion] = test_nn(net, inputs_test, ta
     confusion(1, 2) = FP;
     confusion(2, 1) = FN;
     confusion(2, 2) = TN;
-    % plotconfusion(targets_test, outputs);
 end
